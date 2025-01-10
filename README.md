@@ -21,3 +21,7 @@ Append or prepend the kubectl binary folder to your PATH environment variable:-
 
 Test to ensure the version of kubectl is the same as downloaded:-
 kubectl version --client
+
+
+# For Creating a Container: - 
+#   kubectl create -f File_name[eg: pod.yml]
