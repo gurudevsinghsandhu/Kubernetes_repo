@@ -70,7 +70,7 @@ Creating this repo with an intent to make Kubernetes easy for begineers. This is
 
 
 # Kubernetes Architecture:- 
-
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Fmaster-worker-node-components-kubernetes-cluster-vikas-arora&psig=AOvVaw3rd_4B9dYSb9UsaahQML7g&ust=1736776686140000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLC7wcar8IoDFQAAAAAdAAAAABAS
 
 How to Install Minikube using Chocolatey on Windows
 
