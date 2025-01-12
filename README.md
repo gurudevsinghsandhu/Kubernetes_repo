@@ -1,5 +1,8 @@
 Kubernetes Concepts: K8s
 
+# Kubernetes Architecture:- 
+
+
 How to Install Minikube using Chocolatey on Windows
 
 Step 1: Install Minikube
@@ -50,45 +53,43 @@ Use curl to access your application:
 
 curl <Pod_IP>
 
-Managing Kubernetes Resources
+# Managing Kubernetes Resources
 
-Creating a Pod
+# Creating a Pod
 
-Use a YAML file to create a pod:
+- Use a YAML file to create a pod:
 
 kubectl create -f pod.yml
 
-Checking Pod Status
+# Checking Pod Status
 
-To check the status of all pods:
+- To check the status of all pods:
 
 kubectl get pods
 
-To get more details about the pods:
+- To get more details about the pods:
 
 kubectl get pods -o wide
 
-Deleting a Pod
+# Deleting a Pod
 
-To delete a specific pod:
+- To delete a specific pod:
 
 kubectl delete pod <pod-name>
 
-Listing Kubernetes Resources
-
-List All Resources in a Particular Namespace
+- List All Resources in a Particular Namespace
 
 kubectl get all
 
-List All Resources from All Namespaces
+- List All Resources from All Namespaces
 
 kubectl get all -A
 
-List Deployments
+- List Deployments
 
 kubectl get deployment
 
-List ReplicaSets
+- List ReplicaSets
 
 kubectl get rs
 
@@ -102,7 +103,14 @@ If you make changes to your deployment file, apply them using:
 
 kubectl apply -f <filename>.yml
 
-Notes
+Notes:- 
 
 To find all kubectl commands, search for kubectl cheatsheet on Google.
 
+
+
+# Service in Kubernetes
+
+
+[def]: <kubernetes architecture.jfif>
+[def2]: <kubernetes architecture-1.jfif>
