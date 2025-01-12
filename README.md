@@ -69,8 +69,35 @@ About
 Creating this repo with an intent to make Kubernetes easy for begineers. This is a work-in-progress repo.
 
 
-# Kubernetes Architecture:- 
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Fmaster-worker-node-components-kubernetes-cluster-vikas-arora&psig=AOvVaw3rd_4B9dYSb9UsaahQML7g&ust=1736776686140000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLC7wcar8IoDFQAAAAAdAAAAABAS
+# Kubernetes Architecture:-
+
+A Kubernetes cluster consists of two types of nodes: master and worker nodes. 
+
+The master node hosts the Kubernetes control plane and manages the cluster, including scheduling and scaling applications and maintaining the state of the cluster. 
+
+The worker nodes are responsible for running the containers and executing the workloads.
+
+The master node has several components, such as:
+
+API server: This is the main component that exposes the Kubernetes API and communicates with other components. It is the endpoint that the Kubernetes CLI (kubectl) and other clients talk to when creating or managing resources.
+
+etcd: This is a distributed key-value store that stores the cluster state and configuration data. It is the source of truth for the cluster.
+
+Controller manager: This runs multiple controller processes that watch for changes in the desired state of the cluster and take actions to make it happen. For example, it can create or delete pods, services, or endpoints.
+
+Scheduler: This assigns pods to worker nodes based on various criteria, such as resource requirements, labels, or affinity rules. It works with the API server to schedule the workloads on the cluster.
+
+Cloud controller manager: This runs controllers that are specific to the cloud provider and can manage resources outside of the cluster, such as nodes, load balancers, or routes. This component only runs if the cluster is running in the cloud.
+
+The worker node has these components:
+
+Kubelet: This is an agent that runs on each worker node and communicates with the API server. It manages the containers and pods on the node, ensuring that they are running and healthy. It also reports the node status and resources to the master node.
+
+Container runtime: This is responsible for working with the containers and executing them. It can be Docker or another container runtime, such as containerd or cri-o. It uses the container runtime interface (CRI) to communicate with the kubelet.
+
+Pods: These are groups of one or more containers that share storage and network resources, and a specification for how to run them. Pods are the smallest units of a Kubernetes application. They can be created and managed by workload resources, such as deployments or statefulsets.
+
+Kube-proxy: This is a network proxy that runs on each worker node and enforces network rules on them. It helps Kubernetes in managing the connectivity among pods and services. It also acts as an egress-based load-balancing controller that monitors the Kubernetes API server and updates node’s iptables subsystem based on it.
 
 How to Install Minikube using Chocolatey on Windows
 
