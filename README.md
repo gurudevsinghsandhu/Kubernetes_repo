@@ -70,6 +70,8 @@ Creating this repo with an intent to make Kubernetes easy for begineers. This is
 
 
 # Kubernetes Architecture:-
+![1687453579458](https://github.com/user-attachments/assets/a56cc757-1047-411f-a844-931cf5afabf1)
+
 
 A Kubernetes cluster consists of two types of nodes: master and worker nodes. 
 
