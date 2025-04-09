@@ -1,0 +1,11 @@
+apiVersion: apps/v1 # ClusterIP Service for the Flask app
+kind: Service # The type of the resource
+metadata:
+  name: flask-app-service # The name of the Service
+spec: # The specification of the Service
+  selector: # The labels that the Service selects Pods based on
+    app.kubernetes.io/name: frontendapp # The labels that the Service selects Pods based on
+  ports:
+    - protocol: TCP # The protocol that the Service uses
+      port: 80 # The port on which the Service will be accessible to clients within the cluster
+      targetPort: 80 # The port on the Pods that the Service forwards traffic to

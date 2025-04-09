@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v1     # simple Deployment Yaml file for nginx
 kind: Deployment
 metadata:
   name: frontend-deployment
@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: appcontainer 
-        image: nginx:1.14.2
+        image: gurudevsingh/my-notes-app:latest
+
         ports:
-        - containerPort: 80
+        - containerPort: 8000

@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1 # host based ingress resource for the flask-app-service
+kind: Ingress
+metadata:
+  name: hostbased-ingress-example
+spec:
+  rules:
+  - host: "foo.bar.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/bar"
+        backend:
+          service:
+            name: flask-app-service
+            port:
+              number: 80

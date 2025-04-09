@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pathbased-ingress-example
+spec:
+  rules:
+  - host: "foo.bar.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/foo"
+        backend:
+          service:
+            name: flask-app-service
+            port:
+              number: 80
+      - pathType: Prefix
+        path: "/foo2"
+        backend:
+          service:
+            name: flask-app-service3
+            port:
+              number: 80
